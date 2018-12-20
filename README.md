@@ -1,15 +1,21 @@
 # open_ngo
+This is a flutter UI challenege project, where I will take on UI design and will try to implement that in Flutter.
 
-A new Flutter project.
+# UI challenge
 
-## Getting Started
+The original design is 
+![design](https://cdn.dribbble.com/users/386883/screenshots/5702327/08122018-dribbble_2x.png)
 
-This project is a starting point for a Flutter application.
+Please note that as I have the screenshots only and not exact measurements, fonts, colors, the implementation would vary from the design.
 
-A few resources to get you started if this is your first Flutter project:
+## Let's build
 
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
+# 1.0 Login page
+The login page I developed looks like
+![design](https://github.com/dev-aritra/open_ngo/blob/feature/login/screenshots/login.jpg)
+
+# 2.0 Coming soon...
+
 
 For help getting started with Flutter, view our 
 [online documentation](https://flutter.io/docs), which offers tutorials, 
