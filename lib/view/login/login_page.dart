@@ -33,8 +33,11 @@ class _LoginPageState extends State<LoginPage> {
             CustomInputField(
               isPassword: false,
             ),
-            CustomInputField(
-              isPassword: true,
+            Padding(
+              padding: const EdgeInsets.only(top: 20),
+              child: CustomInputField(
+                isPassword: true,
+              ),
             ),
             _loginOptions(),
             _signInButton()
@@ -106,7 +109,7 @@ class _LoginPageState extends State<LoginPage> {
 
   Widget _signInButton() {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 27.0, horizontal: 10.0),
+      padding: const EdgeInsets.symmetric(vertical: 45.0, horizontal: 12.0),
       child: Row(children: <Widget>[
         Expanded(
           child: RaisedButton(
