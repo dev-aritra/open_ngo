@@ -15,7 +15,7 @@ class _LoginPageState extends State<LoginPage> {
         child: Container(
           decoration: BoxDecoration(color: Colors.white),
           child: Padding(
-            padding: const EdgeInsets.all(20.0),
+            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[_appBar(), Expanded(child: _scrollablePart())],
@@ -29,7 +29,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget _scrollablePart() {
     return SingleChildScrollView(
       child: Padding(
-        padding: const EdgeInsets.only(top: 15.0),
+        padding: const EdgeInsets.only(top: 20.0),
         child: Column(
           
           children: <Widget>[
