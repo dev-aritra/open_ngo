@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:open_ngo/styles/custom_colors.dart';
 
 class CustomInputField extends StatefulWidget {
   bool isPassword = false;
@@ -24,10 +25,10 @@ class _CustomInputFieldState extends State<CustomInputField> {
     return Padding(
       padding: const EdgeInsets.only(top: 20),
       child: TextField(
-        obscureText: !showPassword,
-        cursorColor: Color(0xFF212121),
+        obscureText: isPassword ? !showPassword : false,
+        cursorColor: CustomColors.darkGrey,
         decoration: _inputFieldDecoration(lableText),
-        style: TextStyle(color: Color(0xFF424242), fontSize: 18),
+        style: TextStyle(color: CustomColors.darkGrey, fontSize: 16, fontWeight: FontWeight.w500),
       ),
     );
   }
@@ -47,14 +48,14 @@ class _CustomInputFieldState extends State<CustomInputField> {
             _toggleShowPass();
           },
           
-          icon: Icon(Icons.remove_red_eye, color: Color(0xFF212121)),
+          icon: Icon(Icons.remove_red_eye, color: CustomColors.midGrey),
         );
       } else {
         button = IconButton(
           onPressed: () {
             _toggleShowPass();
           },
-          icon: Icon(Icons.lock),
+          icon: Icon(Icons.lock ,  color: CustomColors.midGrey),
         );
       }
     }
@@ -62,13 +63,13 @@ class _CustomInputFieldState extends State<CustomInputField> {
     return InputDecoration(
       suffixIcon: button,
       labelText: text,
-      labelStyle: TextStyle(color: Color(0xFF9E9E9E)),
+      labelStyle: TextStyle(color: CustomColors.lightGrey, fontSize: 15.0),
       focusedBorder: UnderlineInputBorder(
           borderSide:
-              BorderSide(style: BorderStyle.solid, color: Color(0xFF212121))),
+              BorderSide(style: BorderStyle.solid, color: CustomColors.midGrey)),
       border: UnderlineInputBorder(
           borderSide:
-              BorderSide(style: BorderStyle.solid, color: Color(0xFFEEEEEE))),
+              BorderSide(style: BorderStyle.solid, color: Colors.black)),
     );
   }
 }
