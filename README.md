@@ -12,6 +12,7 @@ Please note that as I have the screenshots only and not exact measurements, font
 
 # 1.0 Login page
 The login page I developed looks like
+<br/>
 ![design](https://github.com/dev-aritra/open_ngo/blob/feature/login/screenshots/login.jpg)
 
 # 2.0 Coming soon...
