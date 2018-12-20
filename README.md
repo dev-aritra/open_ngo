@@ -10,7 +10,7 @@ Please note that as I have the screenshots only and not exact measurements, font
 
 ## Let's build
 
-# 1 Login page
+# 1. Login page
 The login page I developed looks like
 <br/>
 <br/>
@@ -18,7 +18,7 @@ The login page I developed looks like
 
 Close enough right? :smirk:
 
-# 2 Coming soon...
+# 2. Coming soon...
 
 
 For help getting started with Flutter, view our 
