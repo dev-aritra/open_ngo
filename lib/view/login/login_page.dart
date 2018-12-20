@@ -12,11 +12,14 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[_appBar(), Expanded(child: _scrollablePart())],
+        child: Container(
+          decoration: BoxDecoration(color: Colors.white),
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[_appBar(), Expanded(child: _scrollablePart())],
+            ),
           ),
         ),
       ),
