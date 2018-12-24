@@ -20,7 +20,11 @@ class CharityModel{
       img : 'images/pic2.jpg'
     ),
     const CharityModel(
+<<<<<<< HEAD
       title : 'Ghana Residential Fund', 
+=======
+      title : 'Ghana Residential Fund',
+>>>>>>> 23e22dd4986d3949eccb472a8d921e2d37871740
       totalRaisedNow: '\$50,000',
       totalRaisedPrev: '\$40,000',
       img : 'images/pic1.jpg'
