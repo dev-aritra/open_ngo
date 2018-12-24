@@ -22,7 +22,15 @@ The login page I developed looks like
 
 Close enough right? :smirk:
 
-# 2. Coming soon...
+# 2. Landing Page
+So my implementation looks like
+<br/>
+<br/>
+![design](https://github.com/dev-aritra/open_ngo/blob/master/screenshots/home.jpg)
+
+Could not find the heart icon in flutter Icons, hence the alteration. Still pretty close though :boom:
+
+# 3. Coming soon
 
 
 For help getting started with Flutter, view our 
