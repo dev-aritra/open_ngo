@@ -1,0 +1,4 @@
+#Mon Dec 24 18:17:41 IST 2018
+base.0=E\:\\FlutterRepo\\OpenNgo\\open_ngo\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex
