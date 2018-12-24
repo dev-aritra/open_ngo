@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:open_ngo/styles/custom_colors.dart';
+import 'package:open_ngo/view/home/charities_list.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -12,8 +13,24 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
-              child: Column(
-          children: <Widget>[_welcomeWidget()],
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[_welcomeWidget(), _divider() , _listTitle(), Expanded(child: CharitiesList(),)],
+        ),
+      ),
+      bottomNavigationBar: _bottomNavigationbar(),
+    );
+  }
+
+  Widget _listTitle(){
+    return Padding(
+      padding: const EdgeInsets.only(left: 18, top: 18),
+      child: Text(
+        'Trending Charities',
+        style: TextStyle(
+          color: CustomColors.lightGrey,
+          fontSize: 13,
+          fontWeight: FontWeight.w600
         ),
       ),
     );
@@ -21,7 +38,7 @@ class _HomePageState extends State<HomePage> {
 
   Widget _welcomeWidget() {
     return Padding(
-      padding: EdgeInsets.only(top: 50, left: 20, right: 20, bottom: 30),
+      padding: EdgeInsets.only(top: 50, left: 20, right: 20, bottom: 10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -31,6 +48,13 @@ class _HomePageState extends State<HomePage> {
           _selectionButtons()
         ],
       ),
+    );
+  }
+
+  Widget _divider() {
+    return Divider(
+      height: 10,
+      color: CustomColors.lightGrey,
     );
   }
 
@@ -70,10 +94,10 @@ class _HomePageState extends State<HomePage> {
   Widget _selectionButtons() {
     return Padding(
       padding: EdgeInsets.only(top: 25.0, bottom: 25.0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: <Widget>[_gotoProfileButton(), _dismissButton(),]
-      ),
+      child: Row(mainAxisAlignment: MainAxisAlignment.start, children: <Widget>[
+        _gotoProfileButton(),
+        _dismissButton(),
+      ]),
     );
   }
 
@@ -85,11 +109,14 @@ class _HomePageState extends State<HomePage> {
         color: CustomColors.darkBlue,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
         child: Padding(
-          padding: const EdgeInsets.only(left: 15,right: 15 , top: 1,bottom: 1),
+          padding:
+              const EdgeInsets.only(left: 15, right: 15, top: 1, bottom: 1),
           child: Text(
             'GO TO PROFILE',
             style: TextStyle(
-                fontSize: 13.0, fontWeight: FontWeight.bold, color: Colors.white),
+                fontSize: 13.0,
+                fontWeight: FontWeight.bold,
+                color: Colors.white),
           ),
         ),
       ),
@@ -104,8 +131,55 @@ class _HomePageState extends State<HomePage> {
       child: Text(
         'DISMISS',
         style: TextStyle(
-            fontSize: 13.0, fontWeight: FontWeight.bold, color: CustomColors.darkGrey),
+            fontSize: 13.0,
+            fontWeight: FontWeight.bold,
+            color: CustomColors.darkGrey),
       ),
     );
   }
+
+  Widget _bottomNavigationbar() {
+    return Theme(
+      data: Theme.of(context).copyWith(
+        canvasColor: Colors.white,
+        primaryColor: CustomColors.darkBlue,
+      ),
+      child: BottomNavigationBar(
+        currentIndex: 1,
+        type: BottomNavigationBarType.fixed,
+        fixedColor: CustomColors.darkBlue,
+        items: <BottomNavigationBarItem>[
+          _bottomBarItem(Icons.home, 'HOME'),
+          _bottomBarItem(Icons.spa, 'CHARITIES'),
+          _bottomBarItem(Icons.search,'EXPLORE'),
+          _bottomBarItem(Icons.person, 'PROFILE'),
+        ],
+      ),
+    );
+  }
+
+  BottomNavigationBarItem _bottomBarItem(IconData iconType, String text) {
+    TextStyle textStyle = TextStyle(fontSize: 12, fontWeight: FontWeight.w600);
+    TextStyle test = textStyle.apply(
+      color: Colors.black
+    );
+
+    return BottomNavigationBarItem(
+      activeIcon: Icon(
+        iconType,
+        color: CustomColors.darkBlue,
+        size: 20,
+      ),
+      title: Text(
+        text,
+        style: textStyle,
+      ),
+      icon: Icon(
+        iconType,
+        color: CustomColors.darkGrey,
+        size: 20,
+      ),
+    );
+  }
+  
 }
