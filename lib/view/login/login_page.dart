@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:open_ngo/styles/custom_colors.dart';
-import 'package:open_ngo/view/home/home_page.dart';
+import 'package:open_ngo/view/landing/landing_page.dart';
 import 'package:open_ngo/view/login/custom_input_field.dart';
 
 class LoginPage extends StatefulWidget {
@@ -123,7 +123,7 @@ class _LoginPageState extends State<LoginPage> {
             onPressed: () {
               Navigator.push(context, 
               MaterialPageRoute(
-                builder: (context) => HomePage()
+                builder: (context) => LandingPage()
               ));
             },
             color: CustomColors.darkBlue,

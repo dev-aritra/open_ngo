@@ -1,44 +1,55 @@
 import 'package:flutter/material.dart';
 import 'package:open_ngo/styles/custom_colors.dart';
 import 'package:open_ngo/view/home/charities_list.dart';
+import 'package:open_ngo/view/utils/circular_dp.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget{
   @override
-  _HomePageState createState() => _HomePageState();
-}
+    Widget build(BuildContext context) {
+      return SafeArea(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              _circularImage(),
+              _welcomeWidget(),
+              _divider(),
+              _listTitle(),
+              Expanded(
+                child: CharitiesList(),
+              )
+            ],
+          ),
+        );
+    }
 
-class _HomePageState extends State<HomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[_welcomeWidget(), _divider() , _listTitle(), Expanded(child: CharitiesList(),)],
-        ),
+    
+
+  Widget _circularImage() {
+    return Padding(
+      padding: const EdgeInsets.only(right: 40, top: 30),
+      child: Container(
+        alignment: Alignment.centerRight,
+        child: CircularDP('images/p1.jpg'),
       ),
-      bottomNavigationBar: _bottomNavigationbar(),
     );
   }
 
-  Widget _listTitle(){
+  Widget _listTitle() {
     return Padding(
       padding: const EdgeInsets.only(left: 18, top: 18),
       child: Text(
         'Trending Charities',
         style: TextStyle(
-          color: CustomColors.lightGrey,
-          fontSize: 13,
-          fontWeight: FontWeight.w600
-        ),
+            color: CustomColors.lightGrey,
+            fontSize: 13,
+            fontWeight: FontWeight.w600),
       ),
     );
   }
 
   Widget _welcomeWidget() {
     return Padding(
-      padding: EdgeInsets.only(top: 50, left: 20, right: 20, bottom: 10),
+      padding: EdgeInsets.only(top: 0, left: 20, right: 20, bottom: 10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -138,48 +149,5 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  Widget _bottomNavigationbar() {
-    return Theme(
-      data: Theme.of(context).copyWith(
-        canvasColor: Colors.white,
-        primaryColor: CustomColors.darkBlue,
-      ),
-      child: BottomNavigationBar(
-        currentIndex: 1,
-        type: BottomNavigationBarType.fixed,
-        fixedColor: CustomColors.darkBlue,
-        items: <BottomNavigationBarItem>[
-          _bottomBarItem(Icons.home, 'HOME'),
-          _bottomBarItem(Icons.spa, 'CHARITIES'),
-          _bottomBarItem(Icons.search,'EXPLORE'),
-          _bottomBarItem(Icons.person, 'PROFILE'),
-        ],
-      ),
-    );
-  }
 
-  BottomNavigationBarItem _bottomBarItem(IconData iconType, String text) {
-    TextStyle textStyle = TextStyle(fontSize: 12, fontWeight: FontWeight.w600);
-    TextStyle test = textStyle.apply(
-      color: Colors.black
-    );
-
-    return BottomNavigationBarItem(
-      activeIcon: Icon(
-        iconType,
-        color: CustomColors.darkBlue,
-        size: 20,
-      ),
-      title: Text(
-        text,
-        style: textStyle,
-      ),
-      icon: Icon(
-        iconType,
-        color: CustomColors.darkGrey,
-        size: 20,
-      ),
-    );
-  }
-  
 }
