@@ -5,14 +5,18 @@ import 'package:percent_indicator/linear_percent_indicator.dart';
 
 class CharitiesList extends StatelessWidget {
   double _screenWidth;
+  double _listImageHeight;
+  List<CharityModel> data;
+
+  CharitiesList(this._listImageHeight, this.data);
 
   @override
   Widget build(BuildContext context) {
     _screenWidth = MediaQuery.of(context).size.width;
     return ListView.builder(
-      itemCount: 2,
+      itemCount: data.length,
       itemBuilder: (BuildContext ctxt, int index){
-        return _listItem(CharityModel.charities[index]);
+        return _listItem(data[index]);
       },
     );
     
@@ -101,9 +105,9 @@ class CharitiesList extends StatelessWidget {
 
   Widget _image(String imageItem) {
     return Container(
-      height: 160,
+      height: _listImageHeight,
       child: Padding(
-        padding: const EdgeInsets.all(18.0),
+        padding: const EdgeInsets.all(18),
         child: DecoratedBox(
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(7),

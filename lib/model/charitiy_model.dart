@@ -6,7 +6,7 @@ class CharityModel{
 
   const CharityModel({this.title, this.totalRaisedNow, this.totalRaisedPrev, this.img});
 
-  static final List<CharityModel> charities = [
+  static final List<CharityModel> charities1 = [
     const CharityModel(
       title : 'St. Loueis Welfare Org.',
       totalRaisedNow: '\$12,500',
@@ -19,6 +19,11 @@ class CharityModel{
       totalRaisedPrev: '\$10,000',
       img : 'images/pic2.jpg'
     ),
+    
+
+  ];
+
+  static final List<CharityModel> charities2 = [
     const CharityModel(
       title : 'Ghana Residential Fund', 
       totalRaisedNow: '\$50,000',
