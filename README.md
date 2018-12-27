@@ -30,8 +30,18 @@ So my implementation looks like
 
 Could not find the heart icon in flutter Icons, hence the alteration. Still pretty close though :boom:
 
-# 3. Coming soon
+# 3. Charities page
+This is what I built
+<br/>
+<br/>
+![design](https://github.com/dev-aritra/open_ngo/blob/master/screenshots/charities.jpg)
 
+Altered the user's picture here, for obvious reasons :joy:
+
+<br/>
+
+# Stay tuned
+<br/>
 
 For help getting started with Flutter, view our 
 [online documentation](https://flutter.io/docs), which offers tutorials, 
