@@ -24,7 +24,7 @@ class _CharitiesState extends State<CharitiesPage> {
       child: Padding(
         padding: const EdgeInsets.only(top: 28),
         child: Column(
-            children: <Widget>[_topRow() , _listTitle(), Expanded(child : CharitiesList(300, CharityModel.charities2))]),
+            children: <Widget>[_topRow() , _listTitle(), Expanded(child : CharitiesList(250, CharityModel.charities2))]),
       ),
     );
   }

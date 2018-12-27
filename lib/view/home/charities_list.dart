@@ -104,6 +104,8 @@ class CharitiesList extends StatelessWidget {
   }
 
   Widget _image(String imageItem) {
+
+    BoxFit fit = _listImageHeight == 160 ? BoxFit.fitWidth : BoxFit.fitHeight;
     return Container(
       height: _listImageHeight,
       child: Padding(
@@ -112,7 +114,7 @@ class CharitiesList extends StatelessWidget {
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(7),
               image: DecorationImage(
-                fit: BoxFit.fitWidth,
+                fit: fit,
                 alignment: FractionalOffset.topCenter,
                 image: AssetImage(imageItem),
               )),
