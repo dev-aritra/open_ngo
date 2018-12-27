@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Dec 26 18:11:37 IST 2018
+#Thu Dec 27 13:57:17 IST 2018
 17.baseType=DIRECTORY
 4.path=flutter_assets/images/2.0x/p1.jpg
 25.base=E\:\\FlutterRepo\\OpenNgo\\open_ngo\\build\\app\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
