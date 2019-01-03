@@ -15,13 +15,16 @@ class CharityDetailPage extends StatelessWidget {
     _screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Stack(
-        children: <Widget>[
-          _charityData(context),
-          Positioned(
-            child: _signInButton(),
-          )
-        ],
+      body: Padding(
+        padding: const EdgeInsets.only(top: 15),
+        child: Stack(
+          children: <Widget>[
+            _charityData(context),
+            Positioned(
+              child: _signInButton(),
+            )
+          ],
+        ),
       ),
     );
   }
