@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:open_ngo/model/charitiy_model.dart';
 import 'package:open_ngo/styles/custom_colors.dart';
+import 'package:open_ngo/view/charityDetail/charity_details_page.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
 class CharitiesList extends StatelessWidget {
@@ -15,25 +16,36 @@ class CharitiesList extends StatelessWidget {
     _screenWidth = MediaQuery.of(context).size.width;
     return ListView.builder(
       itemCount: data.length,
+
       itemBuilder: (BuildContext ctxt, int index){
-        return _listItem(data[index]);
+
+        return _listItem(data[index] , context);
       },
     );
     
   }
 
-  Widget _listItem(CharityModel charity) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 20),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        mainAxisSize: MainAxisSize.min,
-        children: <Widget>[
-          _image(charity.img),
-          _title(charity.title),
-          _line(50),
-          _fundStatus(charity.totalRaisedPrev, charity.totalRaisedNow)
-        ],
+  Widget _listItem(CharityModel charity, BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+              Navigator.push(context, 
+              MaterialPageRoute(
+                builder: (context) => CharityDetailPage(charity)
+              ));
+            },
+      child: Padding(
+
+        padding: const EdgeInsets.only(bottom: 20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            _image(charity.img),
+            _title(charity.title),
+            _line(50),
+            _fundStatus(charity.totalRaisedPrev, charity.totalRaisedNow)
+          ],
+        ),
       ),
     );
   }

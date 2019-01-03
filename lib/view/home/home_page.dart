@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:open_ngo/model/charitiy_model.dart';
 import 'package:open_ngo/styles/custom_colors.dart';
-import 'package:open_ngo/view/home/charities_list.dart';
+import 'package:open_ngo/view/utils/charities_list.dart';
 import 'package:open_ngo/view/utils/circular_dp.dart';
 
 class HomePage extends StatelessWidget{
