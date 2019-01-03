@@ -48,12 +48,12 @@ Tried to replicate as much as I could
 
 Looks pretty good to me :heartpulse:
 
-<br/>
-<br/>
+
 
 # This's pretty much what I wanted to achieve
 ![gif](screenshots/record.gif)
-
+<br/>
+<br/>
 
 
 For help getting started with Flutter, view our 
