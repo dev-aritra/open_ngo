@@ -18,7 +18,7 @@ Please note that as I have the screenshots only and not exact measurements, font
 The login page I developed looks like
 <br/>
 <br/>
-![design](https://github.com/dev-aritra/open_ngo/blob/master/screenshots/login.jpg)
+![design](screenshots/login.jpg)
 
 Close enough right? :smirk:
 
@@ -26,7 +26,7 @@ Close enough right? :smirk:
 So my implementation looks like
 <br/>
 <br/>
-![design](https://github.com/dev-aritra/open_ngo/blob/master/screenshots/home.jpg)
+![design](screenshots/home.jpg)
 
 Could not find the heart icon in flutter Icons, hence the alteration. Still pretty close though :boom:
 
@@ -34,14 +34,27 @@ Could not find the heart icon in flutter Icons, hence the alteration. Still pret
 This is what I built
 <br/>
 <br/>
-![design](https://github.com/dev-aritra/open_ngo/blob/master/screenshots/charities.jpg)
+![design](screenshots/charities.jpg)
 
 Altered the user's picture here, for obvious reasons :joy:
 
 <br/>
 
-# Stay tuned
+# 3. Charity details page
+Tried to replicate as much as I could
 <br/>
+<br/>
+![design](screenshots/details.jpg)
+
+Looks pretty good to me :heartpulse:
+
+<br/>
+<br/>
+
+# This's pretty much what I wanted to achieve
+![gif](screenshots/record.gif)
+
+
 
 For help getting started with Flutter, view our 
 [online documentation](https://flutter.io/docs), which offers tutorials, 
