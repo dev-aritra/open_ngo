@@ -50,7 +50,7 @@ Looks pretty good to me :heartpulse:
 
 
 
-# This's pretty much what I wanted to achieve
+# This is pretty much what I wanted to achieve
 ![gif](screenshots/record.gif)
 <br/>
 <br/>
