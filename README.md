@@ -59,3 +59,8 @@ Looks pretty good to me :heartpulse:
 For help getting started with Flutter, view our 
 [online documentation](https://flutter.io/docs), which offers tutorials, 
 samples, guidance on mobile development, and a full API reference.
+</br>
+
+## Author
+
+* **Aritra Das** -[twitter](https://twitter.com/aritra__das)
