@@ -63,4 +63,4 @@ samples, guidance on mobile development, and a full API reference.
 
 ## Author
 
-* **Aritra Das** -[twitter](https://twitter.com/aritra__das)
+* **Aritra Das** - [twitter](https://twitter.com/aritra__das)
